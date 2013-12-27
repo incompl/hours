@@ -1,0 +1,25 @@
+.hours {
+  font-family: sans-serif;
+  padding: .2em .5em;
+  background: #eee;
+}
+
+#hours-difference {
+  margin: .2em 0;
+  color: red;
+}
+
+#hours-open {
+  font-size: 2em;
+  margin: .2em 0 .4em;
+}
+
+.hours-day {
+  margin: .2em 0;
+  color: #555;
+}
+
+.hours-today {
+  font-weight: bold;
+  color: black;
+}
