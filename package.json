@@ -1,0 +1,12 @@
+{
+  "name": "hours",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.2.2",
+    "moment": "~2.5.0",
+    "moment-timezone": "0.0.3"
+  }
+}
