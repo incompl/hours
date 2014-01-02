@@ -70,12 +70,21 @@ var hours = (function() {
 
     _openOrNot: function(now, days, m) {
       m = m || moment();
+      var yesterdayIndex = now.day() - 1 >= 0 ? now.day() - 1 : 6;
+      var hoursYesterday = days[yesterdayIndex];
       var hoursToday = days[now.day()];
       var currentTime = now.hour() * 100 + now.minute();
       var open = false;
       var nextTimeIsOpeningTime = true;
       var findingNextEvent = currentTime < hoursToday[0];
       var until = null;
+
+      // Early in the morning we might count as the previous day
+      var yesterdayEnd = Number(hoursYesterday[hoursYesterday.length - 1]);
+      if (yesterdayEnd > 2400 && currentTime < yesterdayEnd - 2400) {
+        hoursToday = hoursYesterday;
+        currentTime += 2400;
+      }
 
       for (var i = 0; i < hoursToday.length; i++) {
         if (findingNextEvent) {

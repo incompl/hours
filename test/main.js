@@ -75,6 +75,32 @@ module.exports = {
                 'Currently Closed!');
 
     test.done();
+  },
+
+  openOrNotAfterMidnight: function(test) {
+
+    var berlin = moment().tz('Europe/Berlin');
+    berlin.year(2014);
+    berlin.month(0);
+    berlin.date(3);
+    berlin.hours(0);
+    berlin.minutes(30);
+    berlin.seconds(0);
+
+    var days = [
+      [],
+      [],
+      [],
+      [],
+      [2300, 2500],
+      [],
+      [],
+    ];
+
+    test.equals(hours._openOrNot(berlin, days, berlin),
+                'Open right now, until 1:00 am');
+
+    test.done();
   }
 
 };
