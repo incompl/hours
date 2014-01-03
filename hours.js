@@ -117,6 +117,7 @@ var hours = (function() {
     setup: function(element, timeZone, days, m) {
 
       var div;
+      var span;
       var now = m || moment();
 
       // Time zone difference
@@ -137,14 +138,26 @@ var hours = (function() {
       // Hours
       for (var i = 0; i < days.length; i++) {
         div = document.createElement('div');
-        div.id = 'hours-' + dayNames[i];
+        div.className = 'hours-' + dayNames[i];
         if (now.day() === i) {
           div.className = 'hours-day hours-today';
         }
         else {
           div.className = 'hours-day';
         }
-        div.innerText = dayNames[i] + ' ' + hours._getHours(days[i], m);
+
+        // Day name
+        span = document.createElement('span');
+        span.className = 'hours-day-name';
+        span.innerText = dayNames[i];
+        div.appendChild(span);
+
+        // Hours for day
+        span = document.createElement('span');
+        span.id = 'hours-day-details';
+        span.innerText = hours._getHours(days[i], m);
+        div.appendChild(span);
+
         element.appendChild(div);
       }
 
