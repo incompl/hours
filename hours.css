@@ -1,25 +1,32 @@
 .hours {
-  font-family: sans-serif;
-  padding: .2em .5em;
-  background: #eee;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 .1em 0;
+  border-radius: .25em;
+  color: #4B4B4B;
+  background-color: #F5F5F5;
+  border: solid #B1B1B1 1px;
 }
 
 #hours-difference {
-  margin: .2em 0;
-  color: red;
+  padding: .3em .4rem .2em;
+  color: #8A2E2E;
+  background: #FFD7D7;
 }
 
 #hours-open {
-  font-size: 2em;
-  margin: .2em 0 .4em;
+  font-family: Georgia, serif;
+  font-size: 1.5em;
+  margin: .1em .4rem .3em;
 }
 
 .hours-day {
-  margin: .2em 0;
-  color: #555;
+  margin: .2em .4rem;
+  color: #969696;
 }
 
 .hours-today {
+  color: #4B4B4B;
   font-weight: bold;
-  color: black;
 }
