@@ -7,3 +7,7 @@ Uses [Moment](http://momentjs.com/) and [Moment Timezone](http://momentjs.com/ti
 Completely skinnable and easy to integrate with no server-side changes needed.
 
 [MIT License](https://github.com/incompl/hours/blob/master/LICENSE). Built at [Bocoup](http://bocoup.com).
+
+## Browser support
+
+IE9+ for now.

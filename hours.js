@@ -61,6 +61,7 @@ var hours = (function() {
     _getHours: function(day, m) {
       var result = '';
       var thru = false;
+      day = Array.prototype.slice(day); // for IE<9
       if (day.length < 1) {
         return 'Closed';
       }
