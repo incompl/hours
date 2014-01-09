@@ -7,6 +7,15 @@ var hours = (function() {
     'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
   ];
 
+  function setTextContent(el, text) {
+    if (el.textContent) {
+      el.textContent = text;
+    }
+    else {
+      el.innerText = text;
+    }
+  }
+
   return {
 
     _formatTime: function(time, m) {
@@ -125,14 +134,14 @@ var hours = (function() {
       if (diff) {
         div = document.createElement('div');
         div.id = 'hours-difference';
-        div.innerText = diff;
+        setTextContent(div, diff);
         element.appendChild(div);
       }
 
       // Open or not
       div = document.createElement('div');
       div.id = 'hours-open';
-      div.innerText = hours._openOrNot(now, days);
+      setTextContent(div, hours._openOrNot(now, days));
       element.appendChild(div);
 
       // Hours
@@ -149,13 +158,13 @@ var hours = (function() {
         // Day name
         span = document.createElement('span');
         span.className = 'hours-day-name';
-        span.innerText = dayNames[i];
+        setTextContent(span, dayNames[i]);
         div.appendChild(span);
 
         // Hours for day
         span = document.createElement('span');
         span.id = 'hours-day-details';
-        span.innerText = hours._getHours(days[i], m);
+        setTextContent(span, hours._getHours(days[i], m));
         div.appendChild(span);
 
         element.appendChild(div);

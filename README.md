@@ -1,4 +1,4 @@
-Display business hours based on current time.
+## Display business hours based on current time.
 
 [Demo](https://rawgithub.com/incompl/hours/master/demo.html)
 
