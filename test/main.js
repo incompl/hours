@@ -58,7 +58,7 @@ module.exports = {
         [],
         [1200, 1300],
         [],
-        [],
+        []
       ];
 
     test.equals(hours._openOrNot(berlin, days, berlin),
@@ -94,7 +94,7 @@ module.exports = {
       [],
       [2300, 2500],
       [],
-      [],
+      []
     ];
 
     test.equals(hours._openOrNot(berlin, days, berlin),
