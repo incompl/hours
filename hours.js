@@ -8,7 +8,7 @@ var hours = (function() {
   ];
 
   function setTextContent(el, text) {
-    if (el.textContent) {
+    if (el.textContent !== undefined) {
       el.textContent = text;
     }
     else {
